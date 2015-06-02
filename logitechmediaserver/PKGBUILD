@@ -40,5 +40,6 @@ package() {
         cp -a * "${pkgdir}/opt/${pkgname}"
         cd "${srcdir}/slimserver-vendor-${pkgver}"
         cp -a CPAN/build/5.*/lib/*/*linux*/* "${pkgdir}/opt/${pkgname}/CPAN"
+		printf "ARCH-AUR-REL.%s\n%s" "${pkgver}" "$(date)" > "${pkgdir}/opt/${pkgname}/revision.txt"
 }
 
