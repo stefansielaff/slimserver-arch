@@ -3,7 +3,7 @@
 pkgname=logitechmediaserver-git
 pkgver=7.9.0
 _gitver=7.9
-pkgrel=7
+pkgrel=8
 pkgdesc='Slimserver for Logitech Squeezebox players. This server is also called Logitech Media Server. (Git-Version, if you prefer stability consider using logitechmediaserver instead)'
 arch=('i686' 'x86_64' 'arm' 'armv6h' 'armv7h')
 url='https://github.com/stefansielaff/slimserver'
@@ -22,6 +22,7 @@ sha256sums=('SKIP'
 
 prepare() {
 	cd "${srcdir}/slimserver-public-${_gitver}"
+	rm -rf Bin/i86pc-solaris-thread-multi-64int
 	case $CARCH in
 	    x86_64) rm -rf Bin/{arm,armhf}-linux ;;
 	    i686) rm -rf Bin/{arm,armhf}-linux ;;
