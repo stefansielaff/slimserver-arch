@@ -9,7 +9,7 @@ WorkingDirectory=/opt/logitechmediaserver-git
 ExecStart=/opt/logitechmediaserver-git/slimserver.pl \
 	--prefsdir /opt/logitechmediaserver-git/prefs \
 	--cachedir /opt/logitechmediaserver-git/cache \
-	--logdir /opt/logitechmediaserver-git/Logs \
+	--logdir /opt/logitechmediaserver-git/Logs
 
 [Install]
 WantedBy=multi-user.target
